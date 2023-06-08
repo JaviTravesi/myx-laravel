@@ -17,7 +17,10 @@ class EjercicioFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => nombre(),
+            'n_reps' => n_reps(),
+            'n_rondas' => n_rondas(),
+            'video' => video(),
         ];
     }
 }

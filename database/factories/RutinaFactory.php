@@ -17,7 +17,8 @@ class RutinaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nombre' => nombre(),
+            'nivel' => nombre(),
         ];
     }
 }

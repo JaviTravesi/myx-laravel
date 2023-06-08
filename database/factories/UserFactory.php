@@ -21,7 +21,15 @@ class UserFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => bcrypt('123456'), // password
+            'direccion' => fake()->address(),
+            'edad' => fake()->numberBetween(25, 45),
+            'peso' => fake()->numberBetween(60, 100),
+            'altura' => fake()->numberBetween(165, 190),
+            'tipo' => fake()->randomElement([
+                "atleta",
+                "coach"
+            ]),
             'remember_token' => Str::random(10),
         ];
     }

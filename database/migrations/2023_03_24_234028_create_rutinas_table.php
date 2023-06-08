@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('rutinas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->boolean('tipo');
             $table->timestamps();
         });
     }
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('rutinas');
+        $table->dropColumn('tipo');
     }
 };
