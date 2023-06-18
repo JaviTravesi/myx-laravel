@@ -54,7 +54,8 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://myx-laravel-9167b2529826.herokuapp.com/public'),
+    
 
     'asset_url' => env('ASSET_URL'),
 
